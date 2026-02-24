@@ -1,4 +1,4 @@
-const CACHE_NAME = 'deriv hacker-v1.0.0';
+const CACHE_NAME = 'digitpro-v1.0.0';
 const urlsToCache = [
   '/digitpro/',
   '/digitpro/index.html',
@@ -137,7 +137,7 @@ self.addEventListener('push', (event) => {
   };
 
   event.waitUntil(
-    self.registration.showNotification('deriv hacker', options)
+    self.registration.showNotification('digitpro', options)
   );
 });
 

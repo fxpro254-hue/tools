@@ -206,7 +206,7 @@ function showInstallSuccessMessage() {
   message.innerHTML = `
     <div class="success-content">
       <i class="fas fa-check-circle"></i>
-      <span>deriv hacker installed successfully!</span>
+      <span>digitpro installed successfully!</span>
     </div>
   `;
   document.body.appendChild(message);

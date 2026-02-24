@@ -1,6 +1,6 @@
 {
-  "name": "deriv hacker - Deriv Tick Analysis",
-  "short_name": "deriv hacker",
+  "name": "digitpro - Deriv Tick Analysis",
+  "short_name": "digitpro",
   "description": "Professional market analysis and trading intelligence for Deriv",
   "start_url": "/digitpro/",
   "display": "standalone",
