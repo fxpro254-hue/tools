@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Trading Dashboard</title>
+    <link rel="stylesheet" href="/copy trading/styles.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <div id="loginSection" class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>Copy Trading</h1>
+                <p>Login with your Deriv Account</p>
+            </div>
+            <div class="login-content">
+                <button id="loginBtn" class="deriv-login-btn">
+                    <span>Login with Deriv</span>
+                </button>
+                <div class="login-info">
+                    <p>Don't have a Deriv account? <a href="https://deriv.com" target="_blank">Create one now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboardSection" class="dashboard-container" style="display:none;">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1>Copy Trading Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <span id="userName" class="user-name">User</span>
+                    <button id="logoutBtn" class="logout-btn">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Account Summary -->
+            <section class="account-summary">
+                <div class="summary-card-compact">
+                    <div class="account-info-item">
+                        <span class="info-label">Balance:</span>
+                        <span class="info-value"><span id="accountBalance">$0.00</span> <span id="accountCurrency">USD</span></span>
+                    </div>
+                    <div class="account-info-item">
+                        <span class="info-label">User ID:</span>
+                        <span class="info-value" id="userId">-</span>
+                    </div>
+                    <div class="account-info-item">
+                        <span class="info-label">Email:</span>
+                        <span class="info-value" id="userEmail">-</span>
+                    </div>
+                    <div class="account-info-item">
+                        <span class="info-label">Status:</span>
+                        <span class="info-value" id="accountStatus">Active</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Copy Trading Section -->
+            <section class="copy-trading-section">
+                <div class="section-header">
+                    <h2>Copy Trading</h2>
+                    <button id="newTradeBtn" class="btn-primary">+ Start Copying</button>
+                </div>
+
+                <div class="traders-grid" id="tradersGrid">
+                    <div class="trader-card">
+                        <div class="trader-header">
+                            <h4>Top Traders</h4>
+                            <span class="loading">Loading traders...</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Active Copies -->
+            <section class="active-copies-section">
+                <div class="section-header">
+                    <h2>Active Copies</h2>
+                </div>
+                <table class="copies-table">
+                    <thead>
+                        <tr>
+                            <th>Trader</th>
+                            <th>Instrument</th>
+                            <th>Copy Amount</th>
+                            <th>Status</th>
+                            <th>Started</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="copiesTableBody">
+                        <tr>
+                            <td colspan="6" class="no-data">No active copies yet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Trading History -->
+            <section class="trading-history-section">
+                <div class="section-header">
+                    <h2>Trading History</h2>
+                </div>
+                <div id="tradingHistory" class="trading-history">
+                    <p class="no-data">No trading history available</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Loading Modal -->
+    <div id="loadingModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <div class="spinner"></div>
+            <p>Connecting to Deriv...</p>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal" style="display:none;">
+        <div class="modal-content error-content">
+            <h3>Error</h3>
+            <p id="errorMessage"></p>
+            <button id="errorCloseBtn" class="btn-secondary">Close</button>
+        </div>
+    </div>
+
+    <script src="/copy trading/script.js"></script>
+</body>
+</html>

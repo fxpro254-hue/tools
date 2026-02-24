@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deriv Hacker Demo Booking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/book/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../digitpro/icons/icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../digitpro/icons/icon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+  <div class="booking-container">
+    <!-- Left Panel: Booking Info -->
+    <div class="booking-info">
+      <div class="info-header">
+        <h1>Deriv Hacker</h1>
+        <p class="info-subtitle">30-Minute Demo Session</p>
+      </div>
+
+      <div class="info-details">
+        <div class="detail-item">
+          <span class="detail-icon">🕐</span>
+          <div>
+            <p class="detail-label">Duration</p>
+            <p class="detail-value">30 minutes</p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon">🌍</span>
+          <div>
+            <p class="detail-label">Your Timezone</p>
+            <p class="detail-value" id="userTimezone">Loading...</p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon">📍</span>
+          <div>
+            <p class="detail-label">Location</p>
+            <p class="detail-value">Video Call (Google Meet)</p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-icon">✓</span>
+          <div>
+            <p class="detail-label">What to Expect</p>
+            <p class="detail-value">Live walkthrough of 99% accurate signals</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-features">
+        <h3>Demo Includes:</h3>
+        <ul>
+          <li>Live market signal generation</li>
+          <li>Accuracy metrics & confidence scoring</li>
+          <li>Real-time entry/exit points</li>
+          <li>Q&A with trading expert</li>
+          <li>30-minute video call via Google Meet</li>
+          <li>No credit card required</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Panel: Calendar & Form -->
+    <div class="booking-form-section">
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/hackerderiv Hacker-support/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=f9f9f9&primary_color=ff6a00" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background: #1a1a1a; border-top: 1px solid #333; padding: 30px 20px; text-align: center; margin-top: 40px;">
+    <p style="font-size: 13px; color: #aaa; margin-bottom: 10px;">
+      📧 <a href="mailto:hackerderiv@gmail.com" style="color: #289D3F; text-decoration: none;">hackerderiv@gmail.com</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      💬 <a href="https://wa.me/254771229826" target="_blank" style="color: #289D3F; text-decoration: none;">WhatsApp</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      ✈️ <a href="https://t.me/Deriv Hackerexpert" target="_blank" style="color: #289D3F; text-decoration: none;">Telegram</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      📷 <a href="https://instagram.com/bran.dy.fxtrades" target="_blank" style="color: #289D3F; text-decoration: none;">Instagram</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      📋 <a href="/refund/" style="color: #289D3F; text-decoration: none;">Refund Policy</a>
+    </p>
+    <p style="font-size: 12px; color: #666; margin: 0;">&copy; <span id="year"></span> Deriv Hacker. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script src="/book/script.js"></script>
+</body>
+</html>
