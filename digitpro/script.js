@@ -838,7 +838,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Deriv OAuth Configuration
 const DERIV_OAUTH_CONFIG = {
-    app_id: '110104',
+    app_id: '116134',
     oauth_url: 'https://oauth.deriv.com/oauth2/authorize',
     redirect_uri: window.location.origin + window.location.pathname, // Current page as redirect
     scope: 'read'
@@ -1285,7 +1285,7 @@ async function fetchUserInfoFromAPI(userData) {
     return new Promise((resolve, reject) => {
         try {
             // Create a WebSocket connection to get user details
-            const apiUrl = 'wss://ws.derivws.com/websockets/v3?app_id=110104';
+            const apiUrl = 'wss://ws.derivws.com/websockets/v3?app_id=116134';
             const tempWs = new WebSocket(apiUrl);
             
             tempWs.onopen = () => {
@@ -1403,9 +1403,9 @@ async function validateUserAccess(userData) {
         }
         
         // Fetch data from the DerivLite API
-        console.log('📡 Attempting to fetch from API: https://database.derivhacker.com/api/1.1/obj/derivlite');
+        console.log('📡 Attempting to fetch from API: https://database.binaryfx.site/api/1.1/obj/derivlite');
         
-        const response = await fetch('https://database.derivhacker.com/api/1.1/obj/derivlite', {
+        const response = await fetch('https://database.binaryfx.site/api/1.1/obj/derivlite', {
             method: 'GET'
         });
         
@@ -2134,8 +2134,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Payment Modal Functions
 // Configuration - USDT Payment
-const digitpro_USDT_ADDRESS = 'TLZqW3EndtVGJ5dd4QPhwi2yicRapWy436';
-const digitpro_USDT_AMOUNT = 300;
+const DIGITPRO_USDT_ADDRESS = 'TLZqW3EndtVGJ5dd4QPhwi2yicRapWy436';
+const DIGITPRO_USDT_AMOUNT = 300;
 
 function showPaymentModal() {
     const modal = document.getElementById('payment-modal');
@@ -2165,14 +2165,14 @@ function hidePaymentModal() {
         setTimeout(() => {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
-            resetdigitproPaymentModal();
+            resetDigitproPaymentModal();
             showAuthModal();
         }, 300);
     }
 }
 
 // Copy USDT address to clipboard
-function copydigitproAddress(e) {
+function copyDigitproAddress(e) {
     const addressInput = document.getElementById('digitproUsdtAddress');
     if (!addressInput) return;
     const text = addressInput.value || addressInput.innerText || '';
@@ -2202,7 +2202,7 @@ function copydigitproAddress(e) {
 }
 
 // Move to transaction hash input
-function proceedTodigitproVerification() {
+function proceedToDigitproVerification() {
     const email = document.getElementById('digitproPaymentEmail').value;
     if (!email) {
         alert('Please enter your email address');
@@ -2218,7 +2218,7 @@ function proceedTodigitproVerification() {
 }
 
 // Go back to email input
-function goBackTodigitproEmail() {
+function goBackToDigitproEmail() {
     document.getElementById('digitproPaymentStep2').style.display = 'none';
     document.getElementById('digitproPaymentStep1').style.display = 'block';
     document.getElementById('digitproVerificationMessage').style.display = 'none';
@@ -2226,7 +2226,7 @@ function goBackTodigitproEmail() {
 }
 
 // Verify transaction using Tronscan API
-async function verifydigitproTransaction() {
+async function verifyDigitproTransaction() {
     const txHash = document.getElementById('digitproTransactionHash').value.trim();
     const email = sessionStorage.getItem('digitproPaymentEmail');
     const verifyBtn = document.getElementById('digitproVerifyBtn');
@@ -2248,7 +2248,7 @@ async function verifydigitproTransaction() {
         const data = await response.json();
         
         if (!data || !data.contractData) {
-            showdigitproVerificationError(messageDiv, 'Transaction not found. Please check the hash and try again.');
+            showDigitproVerificationError(messageDiv, 'Transaction not found. Please check the hash and try again.');
             verifyBtn.disabled = false;
             verifyBtn.textContent = 'Verify Payment';
             return;
@@ -2258,25 +2258,25 @@ async function verifydigitproTransaction() {
         const contractData = data.contractData;
         const txValue = contractData.amount ? (contractData.amount / 1000000) : 0; // USDT has 6 decimals
         const toAddress = contractData.to || '';
-        const expectedAddress = digitpro_USDT_ADDRESS;
+        const expectedAddress = DIGITPRO_USDT_ADDRESS;
         
         // Check if payment is correct
         if (toAddress.toLowerCase() !== expectedAddress.toLowerCase()) {
-            showdigitproVerificationError(messageDiv, '❌ Transaction sent to wrong address. Please verify and resend to the correct address.');
+            showDigitproVerificationError(messageDiv, '❌ Transaction sent to wrong address. Please verify and resend to the correct address.');
             verifyBtn.disabled = false;
             verifyBtn.textContent = 'Verify Payment';
             return;
         }
         
-        if (txValue !== digitpro_USDT_AMOUNT) {
-            showdigitproVerificationError(messageDiv, `❌ Incorrect amount. Expected ${digitpro_USDT_AMOUNT} USDT, but received ${txValue} USDT.`);
+        if (txValue !== DIGITPRO_USDT_AMOUNT) {
+            showDigitproVerificationError(messageDiv, `❌ Incorrect amount. Expected ${DIGITPRO_USDT_AMOUNT} USDT, but received ${txValue} USDT.`);
             verifyBtn.disabled = false;
             verifyBtn.textContent = 'Verify Payment';
             return;
         }
         
         // Payment verified successfully
-        showdigitproVerificationSuccess(messageDiv, txHash, email);
+        showDigitproVerificationSuccess(messageDiv, txHash, email);
         
         // Activate access after verification
         if (currentUser) {
@@ -2298,13 +2298,13 @@ async function verifydigitproTransaction() {
         
     } catch (error) {
         console.error('Verification error:', error);
-        showdigitproVerificationError(messageDiv, 'Error verifying transaction. Please try again or contact support.');
+        showDigitproVerificationError(messageDiv, 'Error verifying transaction. Please try again or contact support.');
         verifyBtn.disabled = false;
         verifyBtn.textContent = 'Verify Payment';
     }
 }
 
-function showdigitproVerificationSuccess(messageDiv, txHash, email) {
+function showDigitproVerificationSuccess(messageDiv, txHash, email) {
     messageDiv.style.background = 'rgba(76, 175, 80, 0.1)';
     messageDiv.style.borderLeft = '4px solid #4caf50';
     messageDiv.style.color = '#4caf50';
@@ -2318,7 +2318,7 @@ function showdigitproVerificationSuccess(messageDiv, txHash, email) {
     document.getElementById('digitproVerifyBtn').style.display = 'none';
 }
 
-function showdigitproVerificationError(messageDiv, message) {
+function showDigitproVerificationError(messageDiv, message) {
     messageDiv.style.background = 'rgba(244, 67, 54, 0.1)';
     messageDiv.style.borderLeft = '4px solid #f44336';
     messageDiv.style.color = '#ff6a6a';
@@ -2326,7 +2326,7 @@ function showdigitproVerificationError(messageDiv, message) {
     messageDiv.style.display = 'block';
 }
 
-function resetdigitproPaymentModal() {
+function resetDigitproPaymentModal() {
     document.getElementById('digitproPaymentStep1').style.display = 'block';
     document.getElementById('digitproPaymentStep2').style.display = 'none';
     document.getElementById('digitproVerificationMessage').style.display = 'none';
@@ -2338,11 +2338,11 @@ function resetdigitproPaymentModal() {
 }
 
 // Open WhatsApp with a prefilled message
-function opendigitproWhatsAppProof() {
+function openDigitproWhatsAppProof() {
     const email = document.getElementById('digitproPaymentEmail') && document.getElementById('digitproPaymentEmail').value ? document.getElementById('digitproPaymentEmail').value : (sessionStorage.getItem('digitproPaymentEmail') || '');
     const txHash = document.getElementById('digitproTransactionHash') && document.getElementById('digitproTransactionHash').value ? document.getElementById('digitproTransactionHash').value : '';
-    const address = digitpro_USDT_ADDRESS;
-    const amount = digitpro_USDT_AMOUNT;
+    const address = DIGITPRO_USDT_ADDRESS;
+    const amount = DIGITPRO_USDT_AMOUNT;
     
     if (!email) {
         alert('Please enter your email first');
