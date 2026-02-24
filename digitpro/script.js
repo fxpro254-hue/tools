@@ -838,7 +838,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Deriv OAuth Configuration
 const DERIV_OAUTH_CONFIG = {
-    app_id: '116134',
+    app_id: '110104',
     oauth_url: 'https://oauth.deriv.com/oauth2/authorize',
     redirect_uri: window.location.origin + window.location.pathname, // Current page as redirect
     scope: 'read'
@@ -1285,7 +1285,7 @@ async function fetchUserInfoFromAPI(userData) {
     return new Promise((resolve, reject) => {
         try {
             // Create a WebSocket connection to get user details
-            const apiUrl = 'wss://ws.derivws.com/websockets/v3?app_id=116134';
+            const apiUrl = 'wss://ws.derivws.com/websockets/v3?app_id=110104';
             const tempWs = new WebSocket(apiUrl);
             
             tempWs.onopen = () => {
