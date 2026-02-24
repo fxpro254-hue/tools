@@ -83,7 +83,7 @@ function initializePWA() {
   // Register service worker
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/deriv hacker/sw.js')
+      navigator.serviceWorker.register('/digitpro/sw.js')
         .then((registration) => {
           console.log('ServiceWorker registration successful:', registration);
           

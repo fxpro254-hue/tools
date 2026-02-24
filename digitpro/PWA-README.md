@@ -149,7 +149,7 @@ npx http-server deriv hacker -p 8080
 - Ensure proper cache invalidation
 
 ### Icons Not Showing
-- Verify icon files exist in `/deriv hacker/icons/`
+- Verify icon files exist in `/digitpro/icons/`
 - Check icon paths in manifest.json
 - Use icon-generator.html to create missing icons
 

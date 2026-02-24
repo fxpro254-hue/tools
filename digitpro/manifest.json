@@ -2,12 +2,12 @@
   "name": "deriv hacker - Deriv Tick Analysis",
   "short_name": "deriv hacker",
   "description": "Professional market analysis and trading intelligence for Deriv",
-  "start_url": "/deriv hacker/",
+  "start_url": "/digitpro/",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#289D3F",
   "orientation": "portrait-primary",
-  "scope": "/deriv hacker/",
+  "scope": "/digitpro/",
   "categories": ["finance", "productivity", "business"],
   "lang": "en",
   "icons": [
@@ -65,7 +65,7 @@
       "name": "Market Analysis",
       "short_name": "Analysis",
       "description": "View live market analysis",
-      "url": "/deriv hacker/?view=analysis",
+      "url": "/digitpro/?view=analysis",
       "icons": [
         {
           "src": "icons/icon-96x96.png",
