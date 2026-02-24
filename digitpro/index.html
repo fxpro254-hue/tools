@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>digitpro - Deriv Tick Analysis</title>
+    <title>deriv hacker - Deriv Tick Analysis</title>
     
     <!-- PWA Meta Tags -->
     <meta name="description" content="Professional market analysis and trading intelligence for Deriv">
-    <meta name="keywords" content="deriv, trading, analysis, digitpro, market, finance">
-    <meta name="author" content="digitpro">
+    <meta name="keywords" content="deriv, trading, analysis, deriv hacker, market, finance">
+    <meta name="author" content="deriv hacker">
     <meta name="theme-color" content="#289D3F">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="digitpro">
+    <meta name="apple-mobile-web-app-title" content="deriv hacker">
     <meta name="msapplication-TileColor" content="#289D3F">
-    <meta name="msapplication-config" content="/digitpro/browserconfig.xml">
+    <meta name="msapplication-config" content="/deriv hacker/browserconfig.xml">
     
     <!-- PWA Manifest -->
-    <link rel="manifest" href="/digitpro/manifest.json">
+    <link rel="manifest" href="/deriv hacker/manifest.json">
     
     <!-- PWA Icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/digitpro/icons/icon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/digitpro/icons/icon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/digitpro/icons/icon-192x192.png">
-    <link rel="mask-icon" href="/digitpro/icons/safari-pinned-tab.svg" color="#289D3F">
+    <link rel="icon" type="image/png" sizes="32x32" href="/deriv hacker/icons/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/deriv hacker/icons/icon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/deriv hacker/icons/icon-192x192.png">
+    <link rel="mask-icon" href="/deriv hacker/icons/safari-pinned-tab.svg" color="#289D3F">
     <link rel="shortcut icon" href="/favicon.ico">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/digitpro/styles.css">
+    <link rel="stylesheet" href="/deriv hacker/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -42,7 +42,7 @@
                     <rect x="18" y="20" width="24" height="16" rx="3" fill="#0a0a0a" stroke="#289D3F" stroke-width="1.5"/>
                     <text x="30" y="32" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#289D3F">DS</text>
                 </svg>
-                <h2 id="auth-title">digitpro Terminal</h2>
+                <h2 id="auth-title">deriv hacker Terminal</h2>
                 <p id="auth-subtitle">Professional market analysis and trading intelligence</p>
             </div>
             
@@ -101,14 +101,14 @@
     <div id="payment-modal" class="payment-modal">
         <div class="payment-modal-content">
             <button class="modal-close" id="paymentModalClose">✕</button>
-            <h3 class="payment-modal-title">Purchase digitpro – 300 USDT</h3>
+            <h3 class="payment-modal-title">Purchase deriv hacker – 300 USDT</h3>
             <p class="payment-modal-desc">Send exactly 300 USDT (TRC20) to the address below. You'll receive instant access after payment verification.</p>
             
             <div class="address-section">
                 <p class="address-label">USDT TRC20 Address</p>
                 <div class="address-block">
-                    <input type="text" id="digitproUsdtAddress" value="TLZqW3EndtVGJ5dd4QPhwi2yicRapWy436" readonly class="address-input">
-                    <button type="button" class="btn btn-primary" onclick="copyDigitproAddress(event)">Copy</button>
+                    <input type="text" id="deriv hackerUsdtAddress" value="TLZqW3EndtVGJ5dd4QPhwi2yicRapWy436" readonly class="address-input">
+                    <button type="button" class="btn btn-primary" onclick="copyderiv hackerAddress(event)">Copy</button>
                 </div>
             </div>
 
@@ -117,14 +117,14 @@
             </div>
 
             <!-- Step 1: Email Input -->
-            <div id="digitproPaymentStep1" class="payment-step">
+            <div id="deriv hackerPaymentStep1" class="payment-step">
                 <div class="form-group">
                     <label class="form-label">Your Email (for access credentials)</label>
-                    <input type="email" id="digitproPaymentEmail" placeholder="you@example.com" class="form-input">
+                    <input type="email" id="deriv hackerPaymentEmail" placeholder="you@example.com" class="form-input">
                 </div>
 
-                <button type="button" onclick="proceedToDigitproVerification()" class="btn btn-primary btn-full">I've Sent the Payment</button>
-                <button type="button" onclick="openDigitproWhatsAppProof()" class="btn btn-secondary btn-full">Send proof via WhatsApp</button>
+                <button type="button" onclick="proceedToderiv hackerVerification()" class="btn btn-primary btn-full">I've Sent the Payment</button>
+                <button type="button" onclick="openderiv hackerWhatsAppProof()" class="btn btn-secondary btn-full">Send proof via WhatsApp</button>
                 
                 <div class="divider-section">
                     <p class="divider-text">Already have access credentials?</p>
@@ -133,22 +133,22 @@
             </div>
 
             <!-- Step 2: Transaction Verification -->
-            <div id="digitproPaymentStep2" class="payment-step" style="display: none;">
+            <div id="deriv hackerPaymentStep2" class="payment-step" style="display: none;">
                 <div class="form-group">
                     <label class="form-label">Transaction Hash (Tx ID)</label>
                     <p class="form-hint">Find your transaction hash in your wallet or on <a href="https://tronscan.org" target="_blank">Tronscan.org</a></p>
-                    <input type="text" id="digitproTransactionHash" placeholder="Paste transaction hash here..." class="form-input monospace">
+                    <input type="text" id="deriv hackerTransactionHash" placeholder="Paste transaction hash here..." class="form-input monospace">
                 </div>
 
-                <button type="button" onclick="verifyDigitproTransaction()" class="btn btn-primary btn-full" id="digitproVerifyBtn">Verify Payment</button>
-                <button type="button" onclick="goBackToDigitproEmail()" class="btn btn-secondary btn-full">← Back</button>
+                <button type="button" onclick="verifyderiv hackerTransaction()" class="btn btn-primary btn-full" id="deriv hackerVerifyBtn">Verify Payment</button>
+                <button type="button" onclick="goBackToderiv hackerEmail()" class="btn btn-secondary btn-full">← Back</button>
 
                 <div class="whatsapp-fallback">
                     <p>Don't know how to get the transaction hash? You can take a screenshot of your wallet payment confirmation and send it to us on WhatsApp.</p>
-                    <button type="button" onclick="openDigitproWhatsAppProof()" class="btn btn-whatsapp btn-full">Send screenshot via WhatsApp</button>
+                    <button type="button" onclick="openderiv hackerWhatsAppProof()" class="btn btn-whatsapp btn-full">Send screenshot via WhatsApp</button>
                 </div>
 
-                <div id="digitproVerificationMessage" class="verification-message"></div>
+                <div id="deriv hackerVerificationMessage" class="verification-message"></div>
             </div>
             
             <p class="payment-footer">After verification, you'll receive access credentials at your email instantly.</p>
@@ -162,7 +162,7 @@
                 <div class="welcome-icon">
                     <i class="fas fa-check-circle"></i>
                 </div>
-                <h2>Welcome to digitpro!</h2>
+                <h2>Welcome to deriv hacker!</h2>
                 <p>Your account has been successfully authenticated</p>
             </div>
             
@@ -196,7 +196,7 @@
                     <polygon points="18,18 42,18 44,20 44,36 42,38 18,38 16,36 16,20" fill="#0a0a0a" stroke="#289D3F" stroke-width="1.5"/>
                     <text x="30" y="32" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#289D3F">DP</text>
                 </svg>
-                <h2 class="sidebar-title">digitpro</h2>
+                <h2 class="sidebar-title">deriv hacker</h2>
             </div>
             <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">
                 <i class="fas fa-bars"></i>
@@ -411,7 +411,7 @@
     </div>
     
     <!-- PWA Scripts -->
-    <script src="/digitpro/pwa-helper.js"></script>
-    <script src="/digitpro/script.js"></script>
+    <script src="/deriv hacker/pwa-helper.js"></script>
+    <script src="/deriv hacker/script.js"></script>
 </body>
 </html>

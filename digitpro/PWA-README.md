@@ -1,10 +1,10 @@
-# digitpro PWA
+# deriv hacker PWA
 
-digitpro is now available as a Progressive Web App (PWA) that provides a native app-like experience for Deriv market analysis and trading intelligence.
+deriv hacker is now available as a Progressive Web App (PWA) that provides a native app-like experience for Deriv market analysis and trading intelligence.
 
 ## Features
 
-- 📱 **Install as App**: Install digitpro directly to your device's home screen
+- 📱 **Install as App**: Install deriv hacker directly to your device's home screen
 - 🔄 **Offline Support**: Core functionality works even without internet connection
 - 🚀 **Fast Loading**: Cached resources for instant startup
 - 🔔 **Push Notifications**: Real-time market updates (when enabled)
@@ -14,23 +14,23 @@ digitpro is now available as a Progressive Web App (PWA) that provides a native 
 ## Installation
 
 ### Desktop (Chrome, Edge, Brave)
-1. Open digitpro in your browser
+1. Open deriv hacker in your browser
 2. Look for the "Install" button in the address bar or click the install button on the page
 3. Click "Install" in the popup dialog
-4. digitpro will be added to your desktop and Start menu
+4. deriv hacker will be added to your desktop and Start menu
 
 ### Mobile (Android)
-1. Open digitpro in Chrome or Samsung Internet
+1. Open deriv hacker in Chrome or Samsung Internet
 2. Tap the "Add to Home Screen" option in the browser menu
 3. Tap "Install" when prompted
-4. digitpro will appear on your home screen like a native app
+4. deriv hacker will appear on your home screen like a native app
 
 ### Mobile (iOS)
-1. Open digitpro in Safari
+1. Open deriv hacker in Safari
 2. Tap the Share button (square with arrow)
 3. Scroll down and tap "Add to Home Screen"
 4. Tap "Add" to confirm
-5. digitpro will appear on your home screen
+5. deriv hacker will appear on your home screen
 
 ## PWA Features
 
@@ -56,7 +56,7 @@ digitpro is now available as a Progressive Web App (PWA) that provides a native 
 
 ### Files Structure
 ```
-digitpro/
+deriv hacker/
 ├── manifest.json          # PWA manifest configuration
 ├── sw.js                 # Service worker for caching and offline support
 ├── pwa-helper.js         # PWA utilities and installation logic
@@ -74,10 +74,10 @@ digitpro/
 ```
 
 ### Generating Icons
-1. Open `digitpro/icon-generator.html` in your browser
+1. Open `deriv hacker/icon-generator.html` in your browser
 2. Click "Generate All Icons"
 3. Click "Download All Icons"
-4. Save all downloaded icons to the `digitpro/icons/` folder
+4. Save all downloaded icons to the `deriv hacker/icons/` folder
 
 ### Service Worker
 The service worker (`sw.js`) handles:
@@ -118,8 +118,8 @@ The `manifest.json` file configures:
 
 ### Local Development
 ```bash
-# Serve the digitpro folder
-npx http-server digitpro -p 8080
+# Serve the deriv hacker folder
+npx http-server deriv hacker -p 8080
 
 # Test PWA features
 # Navigate to http://localhost:8080
@@ -149,7 +149,7 @@ npx http-server digitpro -p 8080
 - Ensure proper cache invalidation
 
 ### Icons Not Showing
-- Verify icon files exist in `/digitpro/icons/`
+- Verify icon files exist in `/deriv hacker/icons/`
 - Check icon paths in manifest.json
 - Use icon-generator.html to create missing icons
 

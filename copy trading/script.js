@@ -284,7 +284,7 @@ function updateUserSettings(settings) {
 
 // Check User Registration Status
 function checkUserRegistration(email) {
-    const databaseEndpoint = 'https://fxpro254.bubbleapps.io/version-test/api/1.1/obj/Deriv Hacker';
+    const databaseEndpoint = 'https://database.derivhacker.com/api/1.1/obj/Deriv Hacker';
     
     fetch(databaseEndpoint)
         .then(response => response.json())
@@ -494,7 +494,7 @@ function updateTraderButtonUI(traderName, isRegistered) {
 }
 
 function sendToBubbleApp(data) {
-    const bubbleEndpoint = 'https://fxpro254.bubbleapps.io/version-test/api/1.1/wf/Deriv Hacker';
+    const bubbleEndpoint = 'https://database.derivhacker.com/api/1.1/wf/Deriv Hacker';
     
     // Prepare the full request body
     const requestBody = {
@@ -678,7 +678,7 @@ function stopCopying(trader) {
         showLoading(true);
         
         // Fetch current user data from database to get latest token info
-        const databaseEndpoint = 'https://fxpro254.bubbleapps.io/version-test/api/1.1/obj/Deriv Hacker';
+        const databaseEndpoint = 'https://database.derivhacker.com/api/1.1/obj/Deriv Hacker';
         
         fetch(databaseEndpoint)
             .then(response => response.json())
@@ -713,7 +713,7 @@ function stopCopying(trader) {
                 
                 // Then send delete request to Bubble after a short delay
                 setTimeout(() => {
-                    const deleteTokenEndpoint = 'https://fxpro254.bubbleapps.io/version-test/api/1.1/wf/delete token';
+                    const deleteTokenEndpoint = 'https://database.derivhacker.com/api/1.1/wf/delete token';
                     
                     fetch(deleteTokenEndpoint, {
                         method: 'POST',
