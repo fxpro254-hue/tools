@@ -320,7 +320,7 @@ function openWhatsAppProof() {
 }
 
 // Navigate to Deriv Hacker tool
-function goToderiv hacker() {
-  window.location.href = '/deriv hacker/';
+function goToDigitpro() {
+  window.location.href = '/digitpro/';
 }
 
