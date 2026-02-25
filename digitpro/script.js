@@ -1403,9 +1403,9 @@ async function validateUserAccess(userData) {
         }
         
         // Fetch data from the DerivLite API
-        console.log('📡 Attempting to fetch from API: https://database.binaryfx.site/api/1.1/obj/derivlite');
+        console.log('📡 Attempting to fetch from API: https://database.brandyfxtools.site/api/1.1/obj/derivlite');
         
-        const response = await fetch('https://database.binaryfx.site/api/1.1/obj/derivlite', {
+        const response = await fetch('https://database.brandyfxtools.site/api/1.1/obj/derivlite', {
             method: 'GET'
         });
         
