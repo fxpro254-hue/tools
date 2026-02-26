@@ -2351,7 +2351,7 @@ function openDigitproWhatsAppProof() {
     
     const message = `Hello, I sent ${amount} USDT (TRC20) to ${address}.\nEmail: ${email}\nTransaction hash: ${txHash}\nI have attached a screenshot of the payment. Please confirm.`;
     
-    const waUrl = `https://wa.me/+254771229826?text=${encodeURIComponent(message)}`;
+    const waUrl = `https://wa.me/+254757696797?text=${encodeURIComponent(message)}`;
     window.open(waUrl, '_blank');
 }
 

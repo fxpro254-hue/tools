@@ -1,5 +1,5 @@
 // Configuration - set your WhatsApp number (international format, no plus), USDT address and amount
-const WHATSAPP_NUMBER = '254771229826'; // e.g. 14151234567
+const WHATSAPP_NUMBER = '254757696797'; // e.g. 14151234567
 const USDT_ADDRESS = 'TN8dEtjGKJwCLaKKwPpYaKKN9ynKN2Lf6Y';
 const USDT_AMOUNT = 300;
 
