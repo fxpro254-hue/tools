@@ -85,7 +85,28 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+// Pricing button handlers
+document.getElementById('pricingBuyBasic').addEventListener('click', function() {
+  openBuyModal(200);
+});
 
+document.getElementById('pricingBuyPro').addEventListener('click', function() {
+  openBuyModal(300);
+});
+
+// Update the buy modal function to accept price parameter
+function openBuyModal(price) {
+  const modal = document.getElementById('buyModal');
+  const title = modal.querySelector('.buy-modal-title');
+  const desc = modal.querySelector('.buy-modal-desc');
+  const warningBox = modal.querySelector('.buy-warning-box');
+  
+  title.textContent = `Purchase This Module – ${price} USDT`;
+  desc.textContent = `Send exactly ${price} USDT (TRC20) to the address below. You'll receive instant access after payment verification.`;
+  warningBox.innerHTML = `<p><strong>⚠️ Important:</strong> Send exactly ${price} USDT on the Tron network (TRC20). Other amounts or networks will not be processed.</p>`;
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
   // Form submissions
   const demoForm = document.getElementById('demoForm');
   if (demoForm) {
