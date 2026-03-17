@@ -1,6 +1,6 @@
 // Configuration - set your WhatsApp number (international format, no plus), USDT address and amount
 const WHATSAPP_NUMBER = '254771814498'; // e.g. 14151234567
-const USDT_ADDRESS = 'TN8dEtjGKJwCLaKKwPpYaKKN9ynKN2Lf6Y';
+const USDT_ADDRESS = 'TLZqW3EndtVGJ5dd4QPhwi2yicRapWy436';
 const USDT_AMOUNT = 300;
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -87,11 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 // Pricing button handlers
 document.getElementById('pricingBuyBasic').addEventListener('click', function() {
-  openBuyModal(200);
+  openBuyModal(100);
 });
 
 document.getElementById('pricingBuyPro').addEventListener('click', function() {
-  openBuyModal(300);
+  openBuyModal(150);
 });
 
 // Update the buy modal function to accept price parameter
