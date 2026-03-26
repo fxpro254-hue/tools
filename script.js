@@ -87,11 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 // Pricing button handlers
 document.getElementById('pricingBuyBasic').addEventListener('click', function() {
-  openBuyModal(100);
+  openBuyModal(200);
 });
 
 document.getElementById('pricingBuyPro').addEventListener('click', function() {
-  openBuyModal(150);
+  openBuyModal(300);
 });
 
 // Update the buy modal function to accept price parameter
