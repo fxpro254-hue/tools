@@ -2134,7 +2134,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Payment Modal Functions
 // Configuration - USDT Payment
-const DIGITPRO_USDT_ADDRESS = 'TLZqW3EndtVGJ5dd4QPhwi2yicRapWy436';
+const DIGITPRO_USDT_ADDRESS = 'TH47oaGtKunPrAKYKVga4DUd49ccijnfmr';
 const DIGITPRO_USDT_AMOUNT = 300;
 
 function showPaymentModal() {
