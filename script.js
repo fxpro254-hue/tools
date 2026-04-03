@@ -91,7 +91,7 @@ document.getElementById('pricingBuyBasic').addEventListener('click', function() 
 });
 
 document.getElementById('pricingBuyPro').addEventListener('click', function() {
-  openBuyModal(300);
+  openBuyModal(150);
 });
 
 // Update the buy modal function to accept price parameter
@@ -344,4 +344,31 @@ function openWhatsAppProof() {
 function goToDigitpro() {
   window.location.href = '/digitpro/';
 }
+
+  function getEATTime() {
+    let now = new Date();
+    let utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    return new Date(utc + (3 * 60 * 60 * 1000)); // UTC+3
+  }
+
+  // Set deadline in EAT
+  let countdownDate = new Date("April 5, 2026 23:59:59 GMT+0300").getTime();
+
+  let timer = setInterval(function () {
+    let now = getEATTime().getTime();
+    let distance = countdownDate - now;
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("time").innerHTML =
+      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    if (distance < 0) {
+      clearInterval(timer);
+      document.getElementById("time").innerHTML = "Expired";
+    }
+  }, 1000);
 

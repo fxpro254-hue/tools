@@ -2146,3 +2146,78 @@ body {
     order: 2;
   }
 }
+.easter-dark {
+  background: linear-gradient(145deg, #0b0f0c, #0f1a13);
+  border: 1px solid rgba(0, 255, 100, 0.25);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 0 25px rgba(0, 255, 100, 0.08);
+  position: relative;
+}
+
+/* badge stays on-brand */
+.easter-badge {
+  background: linear-gradient(45deg, #6cff91, #b6ffcc);
+  color: #062b12;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+}
+
+/* price styling */
+.price-old {
+  text-decoration: line-through;
+  color: rgba(255,255,255,0.4);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.price-value {
+  font-size: 56px;
+  font-weight: 800;
+  color: #6cff91;
+  text-shadow: 0 0 12px rgba(108,255,145,0.4);
+}
+
+/* subtle easter accent (not loud) */
+.pricing-features li {
+  border-bottom: 1px solid rgba(0,255,100,0.08);
+}
+
+/* CTA button */
+.easter-btn {
+  width: 100%;
+  margin-top: 20px;
+  background: linear-gradient(45deg, #00c853, #64dd17);
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-weight: 700;
+  color: #03210f;
+  transition: 0.3s;
+}
+
+.easter-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,100,0.4);
+}
+
+/* countdown */
+.countdown {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #9effb8;
+}
+
+#time {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* small note */
+.easter-note {
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  margin-top: 10px;
+}
