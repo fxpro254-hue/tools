@@ -2221,3 +2221,23 @@ body {
   text-align: center;
   margin-top: 10px;
 }
+.price-old {
+  text-decoration: line-through;
+  color: rgba(255,255,255,0.4);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.proof-note {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #6cff91;
+  font-weight: 600;
+}
+
+.small-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+}
